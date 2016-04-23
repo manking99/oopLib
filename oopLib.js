@@ -13,7 +13,7 @@ function defineClass(className, config) {
         return;
     }
 
-    // наследуемся от 
+    // 
     if (config.extends) {
 
         if (!Array.isArray(config.extends)) {
@@ -53,6 +53,8 @@ function createClass(className, config) {
     var obj = oopLib[className];
 
     Object.assign(obj, config);
+    obj.className = className;
+    obj.init();
     return obj;
 }
 

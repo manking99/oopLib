@@ -1,0 +1,31 @@
+﻿<script src="oopLib.js"></script>
+
+<script>
+
+defineClass('parent_class_name', {
+    parent_class_name_property: 'Я родитель!'
+});
+defineClass('parent_class_name2', {
+    parent_class_name_property2: 'Я родитель2!'
+});
+
+defineClass('class_name', {
+    extends: ['parent_class_name','parent_class_name2'], // inheritance from
+    myProp: [1, 2]
+});
+
+var cls = createClass('class_name', {
+    myProp: [1, 2, 3, 4],
+    myProp2: 'second property',
+
+    init: function(){
+        var me = this;
+        debugger   
+    }
+
+});
+
+cls.myProp[0]; // 1
+ 
+
+</script>
