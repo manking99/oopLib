@@ -1,28 +1,44 @@
 ﻿<script src="oopLib.js"></script>
 
 <script>
+defineClass('parent_class_name10', {
+    parent_class_name_property10: 'I am parent parent_class_name10!',
 
-defineClass('parent_class_name', {
-    parent_class_name_property: 'I am parent!'
+    init : function(){
+    	var me = this;
+    	debugger
+    }
+
+});
+
+defineClass('parent_class_name3', {
+    parent_class_name_property10: 'I am parent parent_class_name3!',
+        extends: ['parent_class_name10'], // inheritance from
+});
+
+defineClass('parent_class_name4', {
+    parent_class_name_property4: 'I am parent parent_class_name4!',
+
+});
+
+
+defineClass('parent_class_name1', {
+    parent_class_name_property1: 'I am parent!'
 });
 defineClass('parent_class_name2', {
+	extends: ['parent_class_name3' , 'parent_class_name4'], // inheritance from
     parent_class_name_property2: 'I am parent2!'
 });
 
 
 defineClass('class_name', {
-    extends: ['parent_class_name','parent_class_name2'], // inheritance from
+    extends: ['parent_class_name1','parent_class_name2'], // inheritance from
     myProp: [1, 2]
 });
 
 var cls = createClass('class_name', {
     myProp: [1, 2, 3, 4],
-    myProp2: 'second property',
-
-    init: function(){
-        var me = this;   
-    }
-
+    myProp2: 'second property'
 });
 
 cls.myProp[0]; // 1
