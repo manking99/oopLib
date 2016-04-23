@@ -3,11 +3,12 @@
 <script>
 
 defineClass('parent_class_name', {
-    parent_class_name_property: 'Я родитель!'
+    parent_class_name_property: 'I am parent!'
 });
 defineClass('parent_class_name2', {
-    parent_class_name_property2: 'Я родитель2!'
+    parent_class_name_property2: 'I am parent2!'
 });
+
 
 defineClass('class_name', {
     extends: ['parent_class_name','parent_class_name2'], // inheritance from
@@ -19,13 +20,10 @@ var cls = createClass('class_name', {
     myProp2: 'second property',
 
     init: function(){
-        var me = this;
-        debugger   
+        var me = this;   
     }
 
 });
 
 cls.myProp[0]; // 1
- 
-
 </script>
