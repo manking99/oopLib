@@ -2,7 +2,7 @@
 oopLib is a javascript microlibrary, that provides OOP STYLE programming in javascript.
 
 EXAMPLE:
-
+```
 defineClass('parent_class_name', {
     parent_class_name_property: 'I am parent!'
 });
@@ -26,3 +26,4 @@ var cls = createClass('class_name', {
 });
 
 cls.myProp[0]; // 1
+```
